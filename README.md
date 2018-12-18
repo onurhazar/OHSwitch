@@ -8,7 +8,7 @@ Xcode 8.0+
 ## How to Use
 ```C#
 var frame = new CGRect(0, 0, 50, 26);
-ohSwitch = new OHSwitch(frame, 8)
+ohSwitch = new OHSwitch(frame)
 {
     ThumbOffFillColor = UIColor.Gray,
     ThumbOnFillColor = UIColor.White,
