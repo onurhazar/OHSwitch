@@ -38,7 +38,9 @@ namespace OHSwitchLib
 
         #region public props
 
-        // UIAppearance compatible property
+        /// <summary>
+        ///   Track border color when state is Off
+        /// </summary>
         public UIColor TrackOffBorderColor
         {
             get
@@ -52,6 +54,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track border color when switch is pressed (touch began, but not ended). Border width is animated and fills inside of the track completely if `ShouldFillOnPush` is true
+        /// </summary>
         public UIColor TrackOffPushBorderColor
         {
             get
@@ -64,6 +69,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track fill color when state is Off
+        /// </summary>
         public UIColor TrackOffFillColor
         {
             get
@@ -77,6 +85,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb border color when state is Off
+        /// </summary>
         public UIColor ThumbOffBorderColor
         {
             get
@@ -90,6 +101,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb border color when switch is pressed (touch began, but not ended). Set to the same value as `ThumbOffBorderColor` if border color animation is not desireable
+        /// </summary>
         public UIColor ThumbOffPushBorderColor
         {
             get
@@ -102,6 +116,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb fill color when state is Off
+        /// </summary>
         public UIColor ThumbOffFillColor
         {
             get
@@ -115,6 +132,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track fill color when state is On
+        /// </summary>
         public UIColor TrackOnFillColor
         {
             get
@@ -127,6 +147,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track border color when state is On. If `ShouldFillOnPush` is true then border completely fills track
+        /// </summary>
         public UIColor TrackOnBorderColor
         {
             get
@@ -139,6 +162,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb border color when state is On
+        /// </summary>
         public UIColor ThumbOnBorderColor
         {
             get
@@ -151,6 +177,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb border color when state is On
+        /// </summary>
         public UIColor ThumbOnFillColor
         {
             get
@@ -163,6 +192,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb shadow color. Alpha value can be used to change shadow opacity
+        /// </summary>
         public UIColor ThumbShadowColor
         {
             get
@@ -176,6 +208,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Diameter of thumb in pixels
+        /// </summary>
         public float ThumbDiameter
         {
             get
@@ -191,6 +226,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track corner radius
+        /// </summary>
         public float CornerRadius
         {
             get
@@ -204,6 +242,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Thumb corner radius
+        /// </summary>
         public float ThumbCornerRadius
         {
             get
@@ -217,6 +258,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track border width is animated and fills inside of the track completely when switch is pressed if true
+        /// </summary>
         public bool ShouldFillOnPush
         {
             get
@@ -229,6 +273,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Track inset from the outer control frame. Usable if thumb is bigger than track
+        /// </summary>
         public float TrackInset
         {
             get
@@ -241,6 +288,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Overall strength of thumb shadow
+        /// </summary>
         public float ShadowStrength
         {
             get
@@ -255,6 +305,9 @@ namespace OHSwitchLib
             }
         }
 
+        /// <summary>
+        ///   Current switch status
+        /// </summary>
         public bool On
         {
             get
@@ -777,6 +830,11 @@ namespace OHSwitchLib
 
         #region Public Methods
 
+        /// <summary>
+        /// Set the switch On/Off.
+        /// </summary>
+        /// <param name="value">Status value</param>
+        /// <param name="animated">Status change animation</param>
         public void SetOn(bool value, bool animated)
         {
             _on = value;
