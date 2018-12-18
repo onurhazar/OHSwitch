@@ -19,7 +19,7 @@ namespace Sample
             var ohSwitch = new OHSwitch(new CGRect((UIScreen.MainScreen.Bounds.Width - 50) / 2, (UIScreen.MainScreen.Bounds.Height - 26) / 2, 50, 26));
             View.AddSubview(ohSwitch);
 
-            ohSwitch.SetOn(true, true);
+            //ohSwitch.SetOn(true, true);
 
             ohSwitch.AddTarget(OnSwitchChanged, UIControlEvent.ValueChanged);
 
