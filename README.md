@@ -1,6 +1,8 @@
 # OHSwitch
 Fully Customizable UISwitch written in C#
 
+![Demo](https://github.com/onurhazar/OHSwitch/blob/master/OHSwitch.gif)
+
 ## Requirements
 iOS 8.3+
 Xcode 8.0+
