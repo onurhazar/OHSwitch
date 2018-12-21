@@ -16,7 +16,14 @@ namespace Sample
         {
             base.ViewDidLoad();
 
-            var ohSwitch = new OHSwitch(new CGRect((UIScreen.MainScreen.Bounds.Width - 50) / 2, (UIScreen.MainScreen.Bounds.Height - 26) / 2, 50, 26));
+            var ohSwitch = new OHSwitch(new CGRect((UIScreen.MainScreen.Bounds.Width - 50) / 2, (UIScreen.MainScreen.Bounds.Height - 26) / 2, 50, 26))
+            {
+                TrackOnBorderColor = UIColor.Purple,
+                ThumbShadowColor = UIColor.Clear,
+                ThumbOnFillColor = UIColor.Purple,
+                ThumbOnBorderColor = UIColor.Yellow
+            };
+
             View.AddSubview(ohSwitch);
 
             //ohSwitch.SetOn(true, true);
